@@ -1,0 +1,14 @@
+version: 2
+sources:
+  - name: datafeed_shared
+    database: "{{('SNOWFLAKE_PRACTISE')}}"
+    schema: BRONZE_LAYER
+    tables:
+      - name: emp_data
+
+sources:
+  - name: silver_layer
+    database: "{{('SNOWFLAKE_PRACTISE')}}"
+    schema: SILVER_LAYER
+    tables:
+      - name: s_emp_data
